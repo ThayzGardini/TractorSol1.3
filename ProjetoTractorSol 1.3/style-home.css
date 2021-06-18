@@ -1,0 +1,167 @@
+/* INICIO DA CONFIGURAÇÃO DO CABEÇALHO*/
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.banner{
+    width: 100%;
+}
+
+.titulo-principal{
+    text-align: center;
+    font-size: 2em; /*proporcional o tamanho, usando 2em que diz que será o dobro do tamanho de 15px, ou seja seja 30px*/
+    margin: 0 0 1em; /*proporcional ao tamanho da fonte dela, 1 espaço dela pra baixo*/
+    clear: left;
+}
+
+.principal p{
+    margin: 0 0 1em;
+}
+
+.principal strong{
+    font-weight: bold;
+}
+
+.principal em{
+    font-style: italic;
+}
+
+.oficina {
+    width: 250px;
+    float: left;
+    margin: 0 20px 20px 20px; /*cima direita baixo esquerda*/
+}
+
+.pagina{
+    background-color: #5c5858;
+}
+
+header{
+    background: #ffffff;   
+    padding: 20px 0;
+}
+
+.menu{
+    position: relative;
+    width: 940px;
+    margin: 0 auto;
+}
+
+nav{
+    position: absolute;
+    top: 110px;
+    right: 0px;
+}
+
+nav li{
+    display: inline;
+    margin: 0 0 0 15px;
+}
+
+nav a{
+    text-transform: uppercase;
+    color: #000000;
+    font-weight: bold;
+    font-size: 22px;
+    text-decoration: none;
+}
+
+nav a:hover{
+    color: coral;
+    text-decoration: underline;
+}
+
+
+/* FIM DA CONFIGURAÇÃO DO CABEÇALHO*/
+
+/*INICIO DO CONTEUDO DA PAGINA*/
+/*INICIO DO CONTEUDO DE SERVIÇOS*/
+.servicos{
+    width: 940px;
+    margin: 0 auto;
+    padding: 50px 0;
+    font-style: italic;
+    text-align: center;
+}
+
+.servicos li{
+    display: inline-block;
+    text-align: center;
+    width: 30%;
+    box-sizing: border-box;
+    vertical-align: top;
+    margin: 0 0 1.5%;
+    padding: 30px 20px;
+    box-sizing: border-box;
+    border: 2px solid #000000;
+    border-radius: 10px;
+}
+
+.servicos li:hover{
+    border-color: coral;
+}
+
+.servicos li:hover p{
+    font-size: 34px;
+}
+/*FIM DO CONTEUDO DE SERVIÇOS*/
+
+/*INCIO DO CONTEUDO DE MARCAS*/
+
+.marcas{
+    padding: 3em 0;
+}
+
+.conteudo-marcas{
+    width: 640px;
+    margin: 0 auto;
+}
+
+.lista-marcas{
+    width: 40%;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.marcas-empresas{
+    line-height: 1.5; /*altura da linha - espaçamento*/
+}
+
+.marcas-empresas:nth-child(2n) { /*pegando so a primeira marca para deixa-la com configuração difenrete*/
+    font-weight: bold;
+}
+
+/*.marcas-empresas:first-child  configurando só o primeiro elemento
+  .marcas-empresas:last-child  configurando so o ultimo elemento
+  .marcas-empresas:nth-child(4) configurando o elemento de posição 4
+  .marcas-empresas:nth-child(2n) configurando o elemento alterando de 2 em 2
+  */
+
+.imagem-marcas{
+    width: 20%;
+}
+
+/*INCIO DO CONTEUDO DE TRABALHOS*/
+.trabalhos{
+    margin: 2em auto;
+    text-align: center;
+}
+
+/*FIM DO CONTEUDO DA PAGINA*/
+
+/*INCIO DO RODAPÉ DA PAGINA*/
+
+footer {
+    position: relative;
+    text-align: center;
+    padding: 40px 0; 
+    background: #070707;
+    top: 250px;
+}
+
+.Copyrigth { 
+    color: #FFFFFF;
+    font-size: 13px;
+    margin: 20px 0 0 ; 
+}
+/*FIM DO RODAPÉ DA PAGINA*/
