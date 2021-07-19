@@ -3,6 +3,23 @@ body {
     font-family: 'Montserrat', sans-serif;
 }
 
+/*Acessibilidade da pagina, deixando link invisivel na pagina, apenas para a 
+navegação pular para o conteudo principal, dando mais acessbilidade*/
+.pularConteudo,
+.pularConteudo:active,
+.pularConteudo:focus,
+.pularConteudo:hover {
+    text-indent: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 1px;
+    height: 1px;
+    display: block;
+    color: transparent;
+    position: absolute;
+}
+
+
 .banner{
     width: 100%;
 }
@@ -12,7 +29,27 @@ body {
     font-size: 2em; /*proporcional o tamanho, usando 2em que diz que será o dobro do tamanho de 15px, ou seja seja 30px*/
     margin: 0 0 1em; /*proporcional ao tamanho da fonte dela, 1 espaço dela pra baixo*/
     clear: left;
+    /* color: rgba(0, 0, 0, 0.3); colocando opacidade no texto */
+    /* text-shadow: 2px 2px rgb(0, 0, 0);  sombra em texto */
 }
+
+.titulo-principal:first-letter{ /*Toda primeira letra ficara em negrito*/
+    font-weight: bold;
+}
+
+.titulo-principal:before{
+    content: "🚜 ";   
+}
+
+.titulo-principal:after{
+    content: " 🚜";
+}
+
+.principal{
+    padding: 3em 0;
+    background: #FEFEFE;
+}
+
 
 .principal p{
     margin: 0 0 1em;
@@ -32,9 +69,9 @@ body {
     margin: 0 20px 20px 20px; /*cima direita baixo esquerda*/
 }
 
-.pagina{
+/* .pagina{
     background-color: #5c5858;
-}
+} */
 
 header{
     background: #ffffff;   
@@ -76,12 +113,19 @@ nav a:hover{
 
 /*INICIO DO CONTEUDO DA PAGINA*/
 /*INICIO DO CONTEUDO DE SERVIÇOS*/
+.servicos-principal{
+    padding: 3em 0;
+    background: linear-gradient(#FEFEFE,#888888);
+
+}
+
 .servicos{
     width: 940px;
     margin: 0 auto;
     padding: 50px 0;
     font-style: italic;
     text-align: center;
+
 }
 
 .servicos li{
@@ -95,6 +139,7 @@ nav a:hover{
     box-sizing: border-box;
     border: 2px solid #000000;
     border-radius: 10px;
+    word-break: break-word;
 }
 
 .servicos li:hover{
@@ -110,6 +155,7 @@ nav a:hover{
 
 .marcas{
     padding: 3em 0;
+    background: linear-gradient(#888888,#7c7676);
 }
 
 .conteudo-marcas{
@@ -127,8 +173,12 @@ nav a:hover{
     line-height: 1.5; /*altura da linha - espaçamento*/
 }
 
-.marcas-empresas:nth-child(2n) { /*pegando so a primeira marca para deixa-la com configuração difenrete*/
+.marcas-empresas:nth-child(2n) { /*pegando sempre a 2 posição para deixa-la com configuração difenrete*/
     font-weight: bold;
+}
+
+.marcas-empresas:before{
+    content: " 🚜 ";
 }
 
 /*.marcas-empresas:first-child  configurando só o primeiro elemento
@@ -138,13 +188,31 @@ nav a:hover{
   */
 
 .imagem-marcas{
-    width: 20%;
+    width: 60%;
+    opacity: 1;
+    transition: 800ms;
+    box-shadow: 10px 10px 10px 0 #000000; /*sombra*/
 }
 
-/*INCIO DO CONTEUDO DE TRABALHOS*/
+.imagem-marcas:hover{
+    opacity: 0.3;
+}
+
+/*video INCIO DO CONTEUDO DE TRABALHOS*/
 .trabalhos{
-    margin: 2em auto;
+    /* margin: 2em auto; */
     text-align: center;
+    padding: 0 0 32px 9px;
+    background: linear-gradient(#7c7676,#070707);/*para dar degrade no fundo*/
+
+    /*degrade tb pode ser em cirulo
+    background:  radial-gradient(#383737 50%,#000000);*/
+
+}
+
+.trabalho-conteudo{
+    width: 940px; 
+    margin: 0 auto;  
 }
 
 /*FIM DO CONTEUDO DA PAGINA*/
@@ -154,9 +222,8 @@ nav a:hover{
 footer {
     position: relative;
     text-align: center;
-    padding: 40px 0; 
+    padding: 20px 0; 
     background: #070707;
-    top: 250px;
 }
 
 .Copyrigth { 
@@ -165,3 +232,11 @@ footer {
     margin: 20px 0 0 ; 
 }
 /*FIM DO RODAPÉ DA PAGINA*/
+
+/*configuração para celulares*/
+@media screen and (max-width:480px){
+.principal, .conteudo-marcas, .trabalho-conteudo, .servicos-principal {
+    width: auto;
+   }
+
+}

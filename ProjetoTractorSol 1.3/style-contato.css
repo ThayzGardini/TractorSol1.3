@@ -3,10 +3,6 @@ body {
     font-family: 'Montserrat', sans-serif;
 }
 
-.pagina{
-    background-color: #5c5858;
-}
-
 header{
     background: #ffffff;   
     padding: 20px 0;
@@ -45,29 +41,31 @@ nav a:hover{
 
 /*INICIO DO CONTEUDO DA PAGINA*/
 main {
-    width: 940px;
-    margin: 0 auto;
+    margin: 0 0 -272px 0px;
+    width: 100%;
 }
 
-form {
-    margin: 40px 0;
-}
+.formulario{
+    padding: 3em 0;
+    background: linear-gradient(#FEFEFE,#888888);
+} 
+
 
 form label, form legend {
     display: block;
     font-size: 20px;
-    margin: 0 0 10px; /*dando um espaço de 10px da label pra baixo*/
+    margin: 0 100px 10px; /*dando um espaço de 10px da label pra baixo*/
 }
 
 .input-padrao  {
     display: block;
-    margin: 0 0 20px; /*dando um espaço de 20px do input pra baixo*/
+    margin: 0 100px 17px; /*dando um espaço de 20px do input pra baixo*/
     padding: 10px 25px; /*aumentando tamanho interno do meu input*/
-    width: 50%; /*aumentando a largura*/
+    width: 56%; /*aumentando a largura*/
 }
 
 .checkbox {
-    margin: 20px 0;
+    margin: 21px 92px;
 }
 
 .enviar {
@@ -83,6 +81,7 @@ form label, form legend {
     não ser instantaneo e sim com algum segundo a mais*/
     cursor: pointer; /*sempre que o mouse estiver em cima do botão aparecer a maozinha*/
     transition: 1s transform;  /*aumentar o botão com 1 segundo ao inves de instantaneo*/
+    margin: 16px 205px;
 }
 
 .enviar:hover { /*passando com o mouse por cima do botao*/
@@ -100,8 +99,17 @@ form label, form legend {
     transform: rotate(70deg) scale(1.2);*/   
 }
 
+.horarios{
+    margin: -20px auto -19px;
+    padding: 2rem;
+    text-align: center;
+    background: linear-gradient(#888888,#7c7676);
+}
+
+
+
 table {
-    margin: 20px 0 40px;
+    margin: 20px 294px 8px;
 }
 
 thead {
@@ -115,10 +123,20 @@ td, th{
     padding: 8px 15px; /*8px pra cima e pra baixo  15 para os lados*/
 }
 
+.horario_atendimento{
+    margin: 25px 0px 34px;   
+}
+
+.periodo_atendimento{
+    margin: 5px 107px 8px;
+}
+
 /*INICIO DO CONTEUDO DO MAPA*/
 .mapa{
-    padding: 3em 0; /*3em = 3x o espaçamento proporcional ao tamanho da fonte do meu site*/
-    margin: 0 55px 0px 20px; /*cima direita baixo esquerda*/ 
+   
+    padding: 2em 0px;
+    margin: 12px 0px 20px 0px;
+    background: linear-gradient(#7c7676,#333131);
 }
 .mapa p{
     margin: 0 0 2em;
@@ -128,7 +146,6 @@ td, th{
 .titulo-principal{
     text-align: center;
     font-size: 2em; /*proporcional o tamanho, usando 2em que diz que será o dobro do tamanho de 15px, ou seja seja 30px*/
-    margin: 0 0 1em; /*proporcional ao tamanho da fonte dela, 1 espaço dela pra baixo*/
 }
 
 /*FIM DO CONTEUDO DO MAPA*/
@@ -152,3 +169,11 @@ footer {
     margin: 20px 0 0 ; 
 }
 /*FIM DO RODAPÉ DA PAGINA*/
+
+/*configuração para celulares*/
+@media screen and (max-width:480px){
+    .mapa {
+        width: auto;
+       }
+    
+    }
